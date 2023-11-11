@@ -1,37 +1,41 @@
 # Finance Trading Assitance
-¿ÀÇÂ¼Ò½º¼ÒÇÁÆ®¿þ¾î¼³°è¹×½Ç½À ÇÁ·ÎÁ§Æ® 10Á¶
+ì˜¤í”ˆì†ŒìŠ¤ì†Œí”„íŠ¸ì›¨ì–´ì„¤ê³„ë°ì‹¤ìŠµ í”„ë¡œì íŠ¸ 10ì¡°
 ## Abstract
-#### ÁÖ¿ä±â´É
-1. ÁÖ½Ä ½ÃÀå Âü¿©ÀÚµé¿¡°Ô °ü½ÉÀ» ¹Þ´Â Á¾¸ñµéÀÌ ¿Ö °ü½ÉÀ» ¹Þ´ÂÁö ´º½º Ã£¾ÆÁÖ±â<br>
+#### ì£¼ìš”ê¸°ëŠ¥
+1. ì£¼ì‹ ì‹œìž¥ ì°¸ì—¬ìžë“¤ì—ê²Œ ê´€ì‹¬ì„ ë°›ëŠ” ì¢…ëª©ë“¤ì´ ì™œ ê´€ì‹¬ì„ ë°›ëŠ”ì§€ ë‰´ìŠ¤ ì°¾ì•„ì£¼ê¸°<br>
+   - ì°¸ì—¬ìžë“¤ì—ê²Œ ê´€ì‹¬ ë°›ëŠ” ì¢…ëª©ë“¤ì€ ì‹¤ì‹œê°„ ì¡°íšŒ ìˆœìœ„ë¥¼ í†µí•´ íŒŒì•… ê°€ëŠ¥
+   - ì‹¤ì‹œê°„ ì¡°íšŒ ìˆœìœ„ë¥¼ ì œê³µí•˜ëŠ” ì¦ê¶Œì‚¬ APIë‚˜ ì¦ì‹œ ê´€ë ¨ í™ˆíŽ˜ì´ì§€ í™œìš© ê³ ë ¤
     ![project abstract1](image.png)<br>
-2. ´çÀÏ ½ÃÈ²¿¡ ´ëÇØ ¾Ë±â ½±°Ô ÇÑ ´«¿¡ µé¾î¿Àµµ·Ï informationµéÀ» wrap upÇÏ¿© Á¦°ø <br>
-    ½ÃÈ² °ü·Ã »çÀÌÆ®µéÀº ±¤°í°¡ ¸¹Àº ÆíÀÎµ¥, ÀÇ¹Ì ÀÖ´Â Á¤º¸µé¸¸ Ãß·Á¼­ Á¦°ø
+2. ë‹¹ì¼ ì‹œí™©ì— ëŒ€í•´ ì•Œê¸° ì‰½ê²Œ í•œ ëˆˆì— ë“¤ì–´ì˜¤ë„ë¡ informationë“¤ì„ wrap upí•˜ì—¬ ì œê³µ <br>
+    - ì‹œí™© ê´€ë ¨ ì‚¬ì´íŠ¸ë“¤ì€ ê´‘ê³ ê°€ ë§Žì€ íŽ¸ì¸ë°, ì˜ë¯¸ ìžˆëŠ” ì •ë³´ë“¤ë§Œ ì¶”ë ¤ì„œ ì œê³µ
+    - ì˜ë¯¸ ìžˆëŠ” ì •ë³´ë“¤ì´ëž€, ì›ìžìž¬ ê°€ê²©ì´ë‚˜, ì›ë‹¬ëŸ¬ í™˜ìœ¨ ë“± ë‹¹ì¼ ì‹œí™©ì„ ì˜ˆì¸¡í•  ìˆ˜ ìžˆëŠ” ì •ë³´ë“¤
     ![Alt text](image-2.png)
-3. Å©·Ñ¸µÇÑ Á¤º¸µéÀ» ÇÑ´«¿¡ º¼ ¼ö ÀÖ°Ô À¥ÆäÀÌÁö³ª excel ÆÄÀÏ µî¿¡ ÇÑ¹ø¿¡ Ãâ·ÂÇÏ¿© Á¦°ø <br>
-    (À¥ÆäÀÌÁö outlook Ãß°¡ ¿¹ÂÄ)
+3. í¬ë¡¤ë§í•œ ì •ë³´ë“¤ì„ í•œëˆˆì— ë³¼ ìˆ˜ ìžˆê²Œ ì›¹íŽ˜ì´ì§€ë‚˜ excel íŒŒì¼ ë“±ì— í•œë²ˆì— ì¶œë ¥í•˜ì—¬ ì œê³µ <br>
+    (ì›¹íŽ˜ì´ì§€ outlook ì¶”ê°€ ì˜ˆì •)
 
 
 ## Team Roles
-- ¿¬¼±¿ì<br>
-    Python, JavaScript µîÀ» ÀÌ¿ëÇØ ¸ñÇ¥ÇÑ »çÀÌÆ®µé¿¡¼­ Á¤º¸¸¦ ±Ü¾î¿À´Â ±â´É ±¸Çö
-- ¹®¿øÁÖ<br>
-    HTMLÀ» ¹× JavaScript¸¦ ÀÌ¿ëÇØ Àü¹ÝÀûÀÎ À¥ÆäÀÌÁö ±¸Ãà ¹× ±â´É ±¸Çö
-- Àü±âÇå<br>
-    HTMLÀ» ¹× JavaScript¸¦ ÀÌ¿ëÇØ Àü¹ÝÀûÀÎ À¥ÆäÀÌÁö ±¸Ãà ¹× ±â´É ±¸Çö
-- ¹æÃ¤°æ<br>
-    CSS¸¦ ÀÌ¿ëÇØ À¥ÆäÀÌÁö µðÀÚÀÎ
+- ì—°ì„ ìš°<br>
+    Python, JavaScript ë“±ì„ ì´ìš©í•´ ëª©í‘œí•œ ì‚¬ì´íŠ¸ë“¤ì—ì„œ ì •ë³´ë¥¼ ê¸ì–´ì˜¤ëŠ” ê¸°ëŠ¥ êµ¬í˜„
+- ë¬¸ì›ì£¼<br>
+    HTMLì„ ë° JavaScriptë¥¼ ì´ìš©í•´ ì „ë°˜ì ì¸ ì›¹íŽ˜ì´ì§€ êµ¬ì¶• ë° ê¸°ëŠ¥ êµ¬í˜„
+- ì „ê¸°í—Œ<br>
+    HTMLì„ ë° JavaScriptë¥¼ ì´ìš©í•´ ì „ë°˜ì ì¸ ì›¹íŽ˜ì´ì§€ êµ¬ì¶• ë° ê¸°ëŠ¥ êµ¬í˜„
+- ë°©ì±„ê²½<br>
+    CSSë¥¼ ì´ìš©í•´ ì›¹íŽ˜ì´ì§€ ë””ìžì¸
 
 ## Project Schedule
 ```
-1ÁÖÂ÷(11/03 ~ 11/09) ÁÖÁ¦ ¼±Á¤, ±â´É ±¸Çö ¹× Á¤º¸¸¦ °¡Á®¿Ã website °áÁ¤, ¿ªÇÒ ºÐ¹è
-2ÁÖÂ÷(11/10 ~ 11/16) ´Ù¾çÇÑ website·ÎºÎÅÍ Á¤º¸¸¦ ±Ü¾î¿À´Â ±â´É ±¸Çö ½ÃÀÛ
-3ÁÖÂ÷(11/17 ~ 11/23) web crawling ÁøÇà, À¥ÆäÀÌÁö outlook Á¦ÀÛ ½ÃÀÛ
-4ÁÖÂ÷(11/24 ~ 11/30) web crawlingÀ¸·Î ¾òÀº Á¤º¸µé ÈÄÃ³¸® ÇÏ¿© Àü´Þ, À¥ÆäÀÌÁö µðÀÚÀÎ ½ÃÀÛ
-5ÁÖÂ÷(12/01 ~ 12/07) information web page¿¡ Ãâ·Â ÈÄ °¡µ¶¼º Çâ»óÀÛ¾÷
+1ì£¼ì°¨(11/03 ~ 11/09) ì£¼ì œ ì„ ì •, ê¸°ëŠ¥ êµ¬í˜„ ë° ì •ë³´ë¥¼ ê°€ì ¸ì˜¬ website ê²°ì •, ì—­í•  ë¶„ë°°
+2ì£¼ì°¨(11/10 ~ 11/16) ë‹¤ì–‘í•œ websiteë¡œë¶€í„° ì •ë³´ë¥¼ ê¸ì–´ì˜¤ëŠ” ê¸°ëŠ¥ êµ¬í˜„ ì‹œìž‘
+3ì£¼ì°¨(11/17 ~ 11/23) web crawling ì§„í–‰, ì›¹íŽ˜ì´ì§€ outlook ì œìž‘ ì‹œìž‘
+4ì£¼ì°¨(11/24 ~ 11/30) web crawlingìœ¼ë¡œ ì–»ì€ ì •ë³´ë“¤ í›„ì²˜ë¦¬ í•˜ì—¬ ì „ë‹¬, ì›¹íŽ˜ì´ì§€ ë””ìžì¸ ì‹œìž‘
+5ì£¼ì°¨(12/01 ~ 12/07) information web pageì— ì¶œë ¥ í›„ ê°€ë…ì„± í–¥ìƒìž‘ì—…
 ```
 
 ## Technologies
 - HTML
-- CSS (Çù¾÷ ¿ëÀÌ¼ºÀ» À§ÇØ tailwind °í·Á Áß)
+- CSS (í˜‘ì—… ìš©ì´ì„±ì„ ìœ„í•´ tailwind ê³ ë ¤ ì¤‘)
 - Javascript
 - Python
+- í‚¤ì›€ì¦ê¶Œ API (ê³ ë ¤ ì¤‘)
