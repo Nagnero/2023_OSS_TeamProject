@@ -39,3 +39,13 @@
 - Javascript
 - Python
 - 키움증권 API (고려 중)
+
+## Progress
+- 연선우<br>
+        
+- 문원주<br>
+    - 크롤링 할 사이트 조사
+- 전기헌<br>
+
+- 방채경<br>
+
