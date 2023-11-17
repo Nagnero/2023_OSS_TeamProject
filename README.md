@@ -1,4 +1,4 @@
-# Finance Trading Assitance
+# Finance Trading Assistance
 오픈소스소프트웨어설계및실습 프로젝트 10조
 ## Abstract
 #### 주요기능
@@ -18,11 +18,11 @@
 - 연선우<br>
     Python, JavaScript 등을 이용해 목표한 사이트들에서 정보를 긁어오는 기능 구현
 - 문원주<br>
-    HTML을 및 JavaScript를 이용해 전반적인 웹페이지 구축 및 기능 구현
+    Python, JavaScript 등을 이용해 목표한 사이트들에서 정보를 긁어오는 기능 구현
 - 전기헌<br>
-    HTML을 및 JavaScript를 이용해 전반적인 웹페이지 구축 및 기능 구현
+    HTML, CSS 및 JavaScript를 이용해 전반적인 웹페이지 구축 및 기능
 - 방채경<br>
-    CSS를 이용해 웹페이지 디자인
+    HTML, CSS 및 JavaScript를 이용해 전반적인 웹페이지 구축 및 기능
 
 ## Project Schedule
 ```
@@ -44,8 +44,8 @@
 - 연선우<br>
         
 - 문원주<br>
-    - 크롤링 할 사이트 조사
+    - 11/14 크롤링 할 사이트 조사
 - 전기헌<br>
-
+    - 11/17 회의록 작성 
 - 방채경<br>
 
