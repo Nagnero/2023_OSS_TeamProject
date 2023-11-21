@@ -52,7 +52,8 @@
 ## Progress
 
 - 연선우<br>
-  - 11/21 readme.md 수정
+  - 11/21 readme.md 수정, <br>
+    web scrapping 초기 구현 (Beautiful Soup)
 - 문원주<br>
   - 11/14 크롤링 할 사이트 조사
 - 전기헌<br>
