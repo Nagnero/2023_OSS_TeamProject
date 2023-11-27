@@ -8,7 +8,7 @@
 - web crawling 진행중 
 - 페이지 디자인 완료
 - 메인페이지 및 해외주식 페이지 구현중
-- 잉여 인력은 다음 일정을 위한 언어 학습중
+- 잉여 인력은 다음 일정을 위한 언어 학습중 <br>
 ![open_source drawio (1)](https://github.com/kw-dhshin/2023-KW-OSS/assets/108858978/7b664b99-8b37-4692-b83f-a0b063410d8d)
 
 #### Project Screenshot
@@ -17,15 +17,14 @@
 - 사이트 조사 및 자료 선별 <br>
 ![image](https://github.com/kw-dhshin/2023-KW-OSS/assets/108858978/7c4e313d-8512-4443-8b3b-a9a07a85bff7)
 ![image](https://github.com/Nagnero/Finance-Trading-Assistance/assets/108858978/dd61f19f-cd44-4a56-b0a6-88df35f2d808)
-- 웹 페이지 레이아웃 디자인
+- 웹 페이지 레이아웃 디자인<br>
 ![image](https://github.com/kw-dhshin/2023-KW-OSS/assets/108858978/d2621376-5b7d-49b5-8224-ab6264a717ab)
 ![image](https://github.com/kw-dhshin/2023-KW-OSS/assets/108858978/5acaba56-3966-4705-b763-8dc8ea3274c4)
 ![image](https://github.com/kw-dhshin/2023-KW-OSS/assets/108858978/4302dc6b-60b8-42cd-b6bf-68d8b4297f68)
-- 회의록
+- 회의록<br>
 ![image](https://github.com/Nagnero/Finance-Trading-Assistance/assets/108858978/7a472d76-b94c-47a1-b0d7-552fe66b942f)
 
 ## Individual Progress Status
-branch를 늦게 만들어서 따로 
 #### seonwoo <br>
 - README.md 기본 틀 작성(https://github.com/Nagnero/Finance-Trading-Assistance/commit/c0dda6326af0d33a12351e89a52d0b7d1d7fa5d2)
 - 웹 디자인 회의(https://github.com/Nagnero/Finance-Trading-Assistance/commit/5e452e7df2ba825d7462cbce5cc3590963b45b7f)
