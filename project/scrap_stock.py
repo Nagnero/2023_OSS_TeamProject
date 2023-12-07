@@ -4,9 +4,15 @@ from bs4 import BeautifulSoup
 from urllib.parse import urlparse, parse_qs
 import time
 
+result_name = []
+result_m_cap = []
+result_price = []
+result_rate = []
+result_news_info = []
+# save filtered stock data
+filtered_data = []
+
 url = "https://finance.naver.com/sise/lastsearch2.naver"
-header = {"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"}
-filename = "1-30.csv"
 
 res = requests.get(url)
 res.raise_for_status()
@@ -14,43 +20,28 @@ soup = BeautifulSoup(res.text, "lxml")
 
 data_rows = soup.find("table", attrs={"class":"type_5"}).find_all("tr")
 
-with open(filename, "w", encoding="utf-8-sig", newline="") as file:
-  writer = csv.writer(file)
-  # save 30 stock data to csv
-  for row in data_rows:
-    # check the row has valid data
-    no_column = row.find_all("td")
-    if len(no_column) <= 1:   # no meaning skip
-      continue
-    temp_url = "https://finance.naver.com" + row.find("a").get("href")
-    data = [column.get_text().strip() for column in no_column]
-    data.append(temp_url)
-    writer.writerow(data)
+# save 30 stock data to csv
+for row in data_rows:
+  # check the row has valid data
+  no_column = row.find_all("td")
+  if len(no_column) <= 1:   # no meaning skip
+    continue
+  temp_url = "https://finance.naver.com" + row.find("a").get("href")
+  data = [column.get_text().strip() for column in no_column]
+  data.append(temp_url)
 
-# save filtered stock data
-filtered_data = []
-
-with open("1-30.csv", "r", encoding="utf-8-sig", newline="") as file:
-  reader = csv.reader(file)
-  for row in reader:
-    if row[5] and any(sign in row[5] for sign in ['+', '-']):
-      change = float(row[5].replace("+", "").replace("-", "").replace("%", "").strip())
-      if abs(change) >= 10.0:
-        filtered_data.append(row)
-
-# 전처리한 데이터 csv로 저장
-with open("filtered_data.csv", "w", newline="", encoding="utf-8") as outfile:
-  writer = csv.writer(outfile)
-  writer.writerows(filtered_data)
-
-
-result_m_cap = []
-result_price = []
-result_news_info = []
+  change = float(data[5].replace("+", "").replace("-", "").replace("%", "").strip())
+  if abs(change) >= 5.0:
+    filtered_data.append(data)
 
 for row in filtered_data:
   res = requests.get(row[-1])
   soup = BeautifulSoup(res.text, "lxml")
+  # save stock name
+  result_name.append(row[1])
+  # save rate
+  result_rate.append(row[5])
+
   # get market capitalization
   m_cap = soup.find("table", attrs={"summary":"시가총액 정보"})
   m_cap_val = m_cap.find("em",id="_market_sum").get_text(strip=True)
@@ -93,12 +84,26 @@ for row in filtered_data:
     if get_news == False:
       result_news_info.append(news_info)
 
-print(result_news_info)
-
 cnt = 0
 for item in filtered_data:
-  print(item[1])
+  print(result_name[cnt])
   print(result_m_cap[cnt])
+  print(result_rate[cnt])
   print(result_price[cnt])
   print(result_news_info[cnt])
   cnt += 1
+
+import json
+
+# JSON으로 변환할 데이터
+data = {
+  "result_m_cap": result_m_cap,
+  "result_price": result_price,
+  "result_news_info": result_news_info
+}
+
+# JSON으로 변환
+json_data = json.dumps(data, ensure_ascii=False)
+
+# 변환된 JSON 출력 또는 다른 곳으로 전달
+print(json_data)
