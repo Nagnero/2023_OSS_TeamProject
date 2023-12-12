@@ -4,20 +4,20 @@ from bs4 import BeautifulSoup
 from urllib.parse import urlparse, parse_qs
 import time
 
-url_metal = ["https://kr.investing.com/commodities/gold",
-            "https://kr.investing.com/commodities/copper",
-            "https://kr.investing.com/commodities/nickel?cid=959208",
-            "https://kr.investing.com/commodities/aluminum",
-            "https://kr.investing.com/commodities/palladium"]
-
-url_food = ["https://kr.investing.com/commodities/us-wheat",
-            "https://kr.investing.com/commodities/us-soybeans",
-            "https://kr.investing.com/commodities/us-corn"]
-
-url_resource = ["https://kr.investing.com/commodities/crude-oil",
-                "https://kr.investing.com/commodities/natural-gas",
-                "https://kr.investing.com/commodities/heating-oil",
-                "https://kr.investing.com/commodities/gasoline-rbob"]
+url_index = ["https://kr.investing.com/indices/kospi",
+            "https://kr.investing.com/indices/kosdaq",
+            "https://kr.investing.com/indices/nq-100",
+            "https://kr.investing.com/indices/us-spx-500",
+            "https://kr.investing.com/indices/us-30",
+            "https://kr.investing.com/indices/hang-sen-40",
+            "https://kr.investing.com/indices/phlx-semiconductor",
+            "https://kr.investing.com/indices/baltic-dry",
+            "https://kr.investing.com/indices/volatility-s-p-500",
+            "https://kr.investing.com/rates-bonds/us-10-yr-t-note",
+            "https://kr.investing.com/rates-bonds/us-2-yr-t-note",
+            "https://kr.investing.com/crypto/bitcoin",
+            "https://kr.investing.com/equities/tesla-motors",
+            "https://kr.investing.com/equities/nvidia-corp"]
 
 result_data = []
 result_price = []
@@ -44,18 +44,10 @@ def get_value_from_investing(url):
 		print(f"An error occurred: {e}")
 		return None
 
-for url in url_metal:
-	get_value_from_investing(url)
-
-for url in url_food:
-	get_value_from_investing(url)
-
-for url in url_resource:
-	get_value_from_investing(url)
+for url in url_index:
+    get_value_from_investing(url)
 
 print(result_price)
 print(result_data)
 print(result_gap)
 print(result_rate)
-
-
