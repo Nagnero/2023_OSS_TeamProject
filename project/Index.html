@@ -1,53 +1,118 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
 
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-}
+      .topnav {
+        overflow: hidden;
+        background-color: #333;
+      }
 
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  font-family: Poppins, sans-serif;
-}
+      .topnav a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        font-family: Poppins, sans-serif;
+      }
 
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
+      .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+      }
 
-.topnav a.active {
-  background-color: #04AA6D;
-  color: white;
-}
-</style>
-</head>
-<body>
+      .topnav a.active {
+        background-color: #04aa6d;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topnav">
+      <a href="Domestic.html">Domestic</a>
+      <a class="active" href="Index.html">Index</a>
+      <a href="Resource.html">Resource</a>
+    </div>
 
-<div class="topnav">
-  <a href="Main.html">Home</a>
-  <a href="Domestic.html">Domestic</a>
-  <a class="active" href="Index.html">Index</a>
-  <a href="Resource.html">Resource</a>
-</div>
+    <div style="padding-left: 16px">
+      <h2>Top Navigation Example</h2>
+      <p>Page : Index</p>
+    </div>
+    <script>
+      // URL 변수 설정
+      const url = "http://localhost:5000/index";
 
-<div style="padding-left:16px">
-  <h2>Top Navigation Example</h2>
-  <p>Page : Index</p>
-</div>
+      // 서버로부터 JSON 데이터 가져오기
+      fetch(url)
+        .then((response) => {
+          // HTTP 상태코드 확인
+          if (!response.ok) {
+            throw new Error("Network response was not ok.");
+          }
+          return response.json(); // JSON 데이터로 변환
+        })
+        .then((data) => {
+          // 가져온 JSON 데이터 처리
+          console.log("반환된 데이터:", data);
 
-</body>
+          // HTML 생성 및 동적으로 데이터 할당
+          const table = document.createElement("table");
+          const thead = document.createElement("thead");
+          const tbody = document.createElement("tbody");
+
+          // 테이블 헤더 생성
+          const headers = ["종목명", "등락", "현재가", "등락률"];
+          const headerRow = document.createElement("tr");
+
+          headers.forEach((headerText) => {
+            const th = document.createElement("th");
+            th.appendChild(document.createTextNode(headerText));
+            headerRow.appendChild(th);
+          });
+
+          thead.appendChild(headerRow);
+          table.appendChild(thead);
+
+          // 테이블 바디 생성
+          for (let i = 0; i < data.result_data.length; i++) {
+            const row = document.createElement("tr");
+
+            // 종목명, 등락, 주가, 등락률
+            const nameCell = document.createElement("td");
+            const gapCell = document.createElement("td");
+            const priceCell = document.createElement("td");
+            const rateCell = document.createElement("td");
+
+            nameCell.textContent = data.result_data[i];
+            gapCell.textContent = data.result_gap[i];
+            priceCell.textContent = data.result_price[i];
+            rateCell.textContent = data.result_rate[i];
+
+            row.appendChild(nameCell);
+            row.appendChild(gapCell);
+            row.appendChild(priceCell);
+            row.appendChild(rateCell);
+
+            tbody.appendChild(row);
+          }
+
+          table.appendChild(tbody);
+
+          // 생성된 테이블을 body에 추가
+          document.body.appendChild(table);
+        })
+        .catch((error) => {
+          // 오류 처리
+          console.error("Fetch Error:", error);
+        });
+    </script>
+  </body>
 </html>

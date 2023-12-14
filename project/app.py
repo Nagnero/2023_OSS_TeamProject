@@ -3,11 +3,12 @@ import json
 import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse, parse_qs
-import time
+from flask_cors import CORS
 
 from flask import Flask, jsonify, request
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/domestic', methods=['GET'])
 def web_get_demestic():
