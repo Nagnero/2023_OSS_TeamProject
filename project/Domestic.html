@@ -172,7 +172,9 @@
           table.appendChild(tbody);
 
           // 생성된 테이블을 body에 추가
-          document.body.appendChild(table);
+          //document.body.appendChild(table);
+          const contentDiv = document.querySelector(".content"); // '.content' 요소 찾기
+          contentDiv.appendChild(table); // 테이블을 '.content' 안에 추가
 
           // 여기서는 간단히 가져온 데이터를 콘솔에 출력하는 예제를 보여드립니다.
         })
